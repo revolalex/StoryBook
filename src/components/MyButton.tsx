@@ -12,6 +12,7 @@ interface MyButtonProp {
   backgroundColor?: string;
   ghost?: boolean;
   shape?: "circle" | "round" | "default";
+  block?: boolean;
 }
 
 const MyButton = ({
