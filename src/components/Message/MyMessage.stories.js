@@ -1,14 +1,19 @@
 import React from 'react';
-import '../App.css'
 
 import MyMessage from './MyMessage.tsx';
-import MyButton from './MyButton';
 
 
 export default {
   component: MyMessage,
   title: 'MyMessage',
-  subcomponents: { MyButton },
+  decorators: [
+    (Story) => (
+      <div style={{ margin: '3em' }}>
+        
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 const Template = args => <MyMessage {...args} />;

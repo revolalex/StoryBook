@@ -1,12 +1,20 @@
 import React from 'react';
-import '../App.css'
 
 import MyProgress from './MyProgress.tsx';
+import '../../App.css'
 
 
 export default {
   component: MyProgress,
   title: 'MyProgress',
+  decorators: [
+    (Story) => (
+      <div style={{ margin: '3em' }}>
+        
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 const Template = args => <MyProgress {...args} />;

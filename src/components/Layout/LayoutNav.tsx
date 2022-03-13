@@ -47,7 +47,7 @@ const LayoutNav = (props: LayoutNavProps) => {
           collapsible
           collapsed={collapsed}
           onCollapse={onCollapse}
-          theme={props.siderTheme}
+          theme={props.siderTheme || "light"}
           reverseArrow={props.reverseArrow}
           defaultCollapsed={props.defaultCollapsed}
           width={props.width || 200}
@@ -55,7 +55,7 @@ const LayoutNav = (props: LayoutNavProps) => {
           breakpoint={props.breakpoint}
         >
           <div className="logo" />
-          <Menu theme={props.siderTheme ||"dark"} defaultSelectedKeys={["1"]} mode="inline">
+          <Menu theme={props.siderTheme ||"light"} defaultSelectedKeys={["1"]} mode="inline">
             <Menu.Item key="1" icon={<PieChartOutlined />}>
               Option 1
             </Menu.Item>

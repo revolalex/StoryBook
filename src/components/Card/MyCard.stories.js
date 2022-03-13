@@ -1,9 +1,8 @@
 import React from 'react';
-import '../../App.css';
 
 import MyCard from './MyCard.tsx';
 
-import {Default as MyButton} from '../MyButton.stories.js';
+import {Default as MyButton} from '../Button/MyButton.stories.js';
 
 
 

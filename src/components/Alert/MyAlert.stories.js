@@ -1,12 +1,19 @@
 import React from 'react';
-import '../App.css'
-
+import '../../App.css'
 import MyAlert from './MyAlert.tsx';
 
 
 export default {
   component: MyAlert,
   title: 'MyAlert',
+  decorators: [
+    (Story) => (
+      <div style={{ margin: '3em' }}>
+        
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 const Template = args => <MyAlert {...args}  />;

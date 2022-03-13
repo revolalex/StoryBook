@@ -1,11 +1,18 @@
 import React from 'react';
-import '../App.css'
 
 import MyIcons from './MyIcons.tsx';
 
 export default {
   component: MyIcons,
   title: 'MyIcons',
+  decorators: [
+    (Story) => (
+      <div style={{ margin: '3em' }}>
+        
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 const Template = args => <MyIcons {...args} />;

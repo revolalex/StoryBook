@@ -3,6 +3,8 @@ import LayoutNav from './LayoutNav.tsx';
 import Mycard from '../Card/MyCard';
 
 
+
+
 export default {
   component: LayoutNav,
   title: 'LayoutNav',
@@ -21,6 +23,12 @@ export const WithCard = (args) => (
     <Mycard  />
   </LayoutNav>
 );
+
+
+
+
+
+
 
 
 
