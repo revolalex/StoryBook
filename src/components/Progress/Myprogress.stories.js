@@ -46,20 +46,23 @@ Steps.args = {
   steps: 10,
   percent: 60,
   showInfo: true,
+  status:"active",
 
 };
 
 export const Dashboard = Template.bind({});
 Dashboard.args = {
+  percent: 75,
   type: "dashboard",
-  steps: 10,
-  gapDegree: 75,
+  showInfo: true,
   gapPosition: "bottom",
+  gapDegree: 75,
   strokeWidth: 6,
   width: 132,
-  showInfo: true,
-
-
+  strokeColor: {
+    '0%': '#108ee9',
+    '100%': '#87d068',
+  },
 
 };
 

@@ -16,10 +16,10 @@ const { Header, Content, Sider } = Layout;
 interface LayoutNavProps {
   LayoutClassName?: string;
   style?: CSSProperties;
-  breakpoint?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
+  siderBreakpoint?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
   collapsed?: boolean;
-  width?: number | string;
-  classSideClassName?: string;
+  siderWidth?: number | string;
+  siderClassName?: string;
   defaultCollapsed?: boolean;
   reverseArrow?: boolean;
   siderTheme?: "light" | "dark";
@@ -50,9 +50,9 @@ const LayoutNav = (props: LayoutNavProps) => {
           theme={props.siderTheme || "light"}
           reverseArrow={props.reverseArrow}
           defaultCollapsed={props.defaultCollapsed}
-          width={props.width || 200}
-          className={props.classSideClassName || "site-layout-background"}
-          breakpoint={props.breakpoint}
+          width={props.siderWidth || 200}
+          className={props.siderClassName || "site-layout-background"}
+          breakpoint={props.siderBreakpoint}
         >
           <div className="logo" />
           <Menu theme={props.siderTheme ||"light"} defaultSelectedKeys={["1"]} mode="inline">
@@ -90,7 +90,7 @@ const LayoutNav = (props: LayoutNavProps) => {
               minHeight: 280,
             }}
           >
-            <div style={{ height: "80vh" }}>
+            <div style={{ minHeight: "80vh", margin: '3em' }} >
               {props.children}
             </div>
           </Content>

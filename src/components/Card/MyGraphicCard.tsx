@@ -26,7 +26,7 @@ interface MyGraphicCardProps {
   tabBarExtraContent?: ReactNode;
   tabList?: Array<{ key: string; tab: ReactNode }>;
   onTabChange?: (key: string) => void;
-  displayMeta?: true;
+  displayMeta?: boolean;
   metaTitle?: string;
   metaDescription?: string;
 }

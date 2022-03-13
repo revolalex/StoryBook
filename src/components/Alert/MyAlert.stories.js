@@ -29,3 +29,27 @@ Default.args = {
     closeText:undefined,
     backgroundColor:undefined,
 };
+
+export const Error = Template.bind({});
+Error.args = {
+  message:"This is an error message",
+  description:'description',
+  type:"error",
+  banner:true,
+  showIcon:true,
+  closable:false,
+  closeText:undefined,
+  backgroundColor:undefined,
+};
+
+export const Warning = Template.bind({});
+Warning.args = {
+  message:"This is an warning message",
+  description:'description',
+  type:"warning",
+  banner:true,
+  showIcon:true,
+  closable:false,
+  closeText:undefined,
+  backgroundColor:undefined,
+};

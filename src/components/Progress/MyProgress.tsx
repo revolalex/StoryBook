@@ -13,7 +13,8 @@ interface ProgressProps {
   // only if type is line
   steps?: number;
   // only if type is circle
-  strokeColor?: string | { from: string; to: string; direction: string };
+  // ex: strokeColor :  "#87d068" | {0% : "#108ee9" 100% : "#87d068"}
+  strokeColor?: string | { from: string; to: string; direction?: string };
   strokeWidth?: number;
   width?: number;
 
@@ -22,8 +23,13 @@ interface ProgressProps {
   gapPosition?: "top" | "bottom" | "left" | "right";
 }
 
-
-const MyProgress = ({ percent, status, type, showInfo, ...props }: ProgressProps) => {
+const MyProgress = ({
+  percent,
+  status,
+  type,
+  showInfo,
+  ...props
+}: ProgressProps) => {
   return (
     <Progress
       percent={percent || 50}

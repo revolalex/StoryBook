@@ -25,6 +25,11 @@ export const WithCard = (args) => (
 );
 
 
+export const WithCardUsingChildren = Empty.bind({});
+WithCardUsingChildren.args = {
+  children: <Mycard {...Mycard.args} />,
+};
+
 
 
 
